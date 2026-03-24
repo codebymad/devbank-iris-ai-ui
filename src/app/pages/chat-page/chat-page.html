@@ -1,0 +1,34 @@
+<!-- <p>chat-page window!</p> -->
+<!-- <button matIconButton aria-label="Example icon button with a vertical three dot icon" (click)="toggleSize()">
+    <mat-icon>fullscreen</mat-icon>
+</button> -->
+
+<div class="chat-container">
+
+    <!-- HEADER -->
+    <div class="chat-header" style="align-content: center; justify-content: center;">
+        <span> <mat-icon style="color: black; transform: scale(1.5); margin-right: 15px;">assistant</mat-icon>Iris</span>
+        <!-- <button mat-icon-button (click)="dialogRef.close()">
+      <mat-icon>close</mat-icon>
+    </button> -->
+    </div>
+
+    <!-- MESSAGES -->
+    <div class="chat-messages">
+        <div class="message bot">Hello! How can I help you today?</div>
+        <div class="message user">I need help with my account.</div>
+    </div>
+
+    <!-- INPUT BAR -->
+    <div class="chat-input">
+        <mat-form-field class="example-full-width" style="width: 100%;">
+            <!-- <mat-label>Favorite food</mat-label> -->
+            <input matInput placeholder="Type a message…" [(ngModel)]="message">
+        </mat-form-field>
+        <!-- <input matInput placeholder="Type a message…" [(ngModel)]="message"> -->
+        <button matIconButton color="primary" (click)="sendMessage()">
+            <mat-icon>send</mat-icon>
+        </button>
+    </div>
+
+</div>
