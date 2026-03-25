@@ -33,12 +33,19 @@ mat-toolbar {
   align-items: center;
   /* perfect vertical alignment */
   gap: 3px;
-
+  cursor: pointer;
 }
 
 .menu-item:hover {
   font-weight: bolder;
- // transform: scale(1.3);
+  // transform: scale(1.3);
+  box-shadow: 0 2px 3px -2px rgba(0, 0, 0, 0.25);
+  border-bottom: 3px black solid;
+}
+
+.clicked {
+  font-weight: bolder;
+  // transform: scale(1.3);
   box-shadow: 0 2px 3px -2px rgba(0, 0, 0, 0.25);
   border-bottom: 3px black solid;
 }

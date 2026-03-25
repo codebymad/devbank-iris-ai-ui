@@ -25,26 +25,38 @@
       width: 60%;
       gap: 40px;
 ">
-        <div class="menu-item">
+
+        @for (item of menuItems; track $index) {
+        <div class="menu-item" [ngClass]="{ 'clicked': selectedMenu === item.key }"
+            (click)="selectedMenu = item.key; item.action()">
+            <mat-icon>{{ item.icon }}</mat-icon>
+            <span>{{ item.label }}</span>
+        </div>
+        }
+
+
+
+
+        <!-- <div class="menu-item" [ngClass]="{ 'clicked': selectedMenu === 'home' }" (click)="navigateToHome()">
             <mat-icon>home</mat-icon>
             <span>Home</span>
         </div>
-        <div class="menu-item">
+        <div class="menu-item" [ngClass]="{ 'clicked': selectedMenu === 'accounts' }" (click)="navigateToAccounts()">
             <mat-icon>account_balance</mat-icon>
             <span>Accounts</span>
         </div>
-        <div class="menu-item">
+        <div class="menu-item" [ngClass]="{ 'clicked': selectedMenu === 'cards' }" (click)="navigateToCards()">
             <mat-icon>credit_card</mat-icon>
             <span>Cards</span>
         </div>
-        <div class="menu-item">
+        <div class="menu-item" [ngClass]="{ 'clicked': selectedMenu === 'transfers' }" (click)="navigateToTransfers()">
             <mat-icon>currency_exchange</mat-icon>
             <span>Transfers</span>
         </div>
-        <div class="menu-item">
+        <div class="menu-item" [ngClass]="{ 'clicked': selectedMenu === 'loans' }" (click)="navigateToLoans()">
             <mat-icon>local_atm</mat-icon>
             <span>Loans</span>
-        </div>
+        </div> -->
         <!-- <div class="menu-item">
             <mat-icon>percent_discount</mat-icon>
             <span>Offers</span>
